@@ -26,19 +26,19 @@
                     <h2>Cadastre seu produto:</h2>
                     <div class="quest">
                         <label for="dataName">Nome*</label>
-                        <input type= "text" name="dataName" id = "dataName" placeholder="Digite o nome do produto">
+                        <input type= "text" name="dataName" id = "dataName" placeholder="Digite o nome do produto" data-required>
                     </div>
                     <div class="quest">
                         <label for="dataQuant">Quantidade*</label>
-                        <input type= "number" name="dataQuant" id = "dataQuant" placeholder="Digite a quantidade">
+                        <input type= "number" name="dataQuant" id = "dataQuant" placeholder="Digite a quantidade" data-required>
                     </div>
                     <div class="quest">
                         <label for="dataCat">Categoria*</label>
-                        <input type= "text" name="dataCat" id = "dataCat" placeholder="Qual a categoria do seu produto">
+                        <input type= "text" name="dataCat" id = "dataCat" placeholder="Qual a categoria do seu produto" data-required> 
                     </div>
                     <div class="quest">
                         <label for="dataSell">Valor de venda*</label>
-                        <input type= "number" name="dataSell" id = "dataSell" placeholder="Qual a categoria do seu produto">
+                        <input type= "number" name="dataSell" id = "dataSell" placeholder="Qual a categoria do seu produto" data-required>
                     </div>
                     <div>
                         <input id="formbutton" type="submit" value= "Cadastrar Produto">
@@ -53,5 +53,7 @@
     <footer>
         <p>Esse site é ficticio, feito apenas para fins de aprendizagem.</p>
     </footer>
+    <p class="error-validation template"></p>
+    <script src="../javascript/validation_product.js"></script>
 </body>
 </html>
