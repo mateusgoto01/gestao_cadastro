@@ -93,19 +93,25 @@ class validator{
 }
 
 function storage_client(){
-    let idSize = 0;
 
-    let client = document.getElementById('dataClient');
-    let quant = document.getElementsByID('dataQuant');
-    let cpf = document.getElementsByID('dataCPF');
-    let cep = document.getElementsByID('dataCEP');
-    let endereco = document.getElementsByID('dataEnd');
+    var client = document.getElementById('dataClient').value;
+    console.log(client);
+    var email = document.getElementById('dataEmail').value;
+    console.log(email);
+    var cpf = document.getElementById('dataCPF').value;
+    var cep = document.getElementById('dataCEP').value;
+    var endereco = document.getElementById('dataEnd').value;
 
     idSize++;
+    var ClienteArray = JSON.parse(localStorage.getItem('Cliente') || '[]');
 
-    let json = {id = idSize, Name: client, Quant: quant, CPF: cpf, CEP: cep, Endereco: endereco};
-    localStorage.setItem('Cliente', JSON.stringify(json));
+    var item = {Name: client, Email: email, CPF: cpf, CEP: cep, Endereco: endereco};
+    ClienteArray.push(item);
+    console.log(ClienteArray);
+    localStorage.setItem('Cliente', JSON.stringify(ClienteArray));
+    alert("Cliente salvado.");
 }
+
 let form = document.getElementById('register');
 let submit = document.getElementById('formbutton');
 
