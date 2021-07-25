@@ -5,56 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Cliente</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <main>
-        <div id="menu">
+        <div class="menu">
             <a href="../main.html">
-                <p>home</p>
+                <p class="pmenu">home</p>
             </a>
             <a href="registercl.html">
-                <p>clientes</p>
+                <p class="pmenu">clientes</p>
             </a>
             <a href="registerpr.html">
-                <p>Produtos</p>
+                <p class="pmenu">Produtos</p>
             </a>
         </div>
-        <h1>Aqui você pode cadastrar teu client</h1>
-        <div>
+        <div class="wrapper">
+            <form id="register" >
+                    <h2>Cadastro de cliente:</h2>
+                    <div class="quest">
+                        <label for="dataClient">Nome*</label>
+                        <input type= "text" name="dataClient" id = "dataClient" placeholder="Digite o seu nome aqui" data-required>
+                    </div>
+                    <div class="quest">
+                        <label for="dataQuant">E-mail*</label>
+                        <input type= "text" name="dataQuant" id = "dataQuant" placeholder="Digite seu e-mail aqui" data-required>
+                    </div>
+                    <div class="quest">
+                        <label for="dataCPF">CPF*</label>
+                        <input type= "number" name="dataCPF" id = "dataCPF" placeholder="Digite o CPF, apenas numero" data-required>
+                    </div>
+                    <div class="quest">
+                        <label for="dataCEP">CEP*</label>
+                        <input type= "number" name="dataCEP" id = "dataCEP" placeholder="Digite o CEP, apenas numeros" data-required>
+                    </div>
+                    <div class="quest">
+                        <label for="dataSell">Endereço*</label>
+                        <input type= "text" name="dataSell" id = "dataSell" placeholder="Digite seu endereço completo" data-required>
+                    </div>
+                    <div>
+                        <input id="formbutton" type="submit" value= "Cadastrar como cliente">
+                    </div>
+            </form>
+        </div>
+        <div class="wrapper">
             <a href="registercl.html"><button>Visualizar cadastros de clientes</button></a>
         </div>
     </main>
-    <form class="register" >
-        <div class = "sign">
-            <h2>Cadastre seu produto:</h2>
-            <div class="quest">
-                <label for="dataClient">Nome*</label>
-                <input type= "text" name="dataClient" id = "dataClient" placeholder="Digite o seu nome aqui">
-            </div>
-            <div class="quest">
-                <label for="dataQuant">E-mail*</label>
-                <input type= "text" name="dataQuant" id = "dataQuant" placeholder="Digite seu e-mail aqui">
-            </div>
-            <div class="quest">
-                <label for="dataCPF">CPF*</label>
-                <input type= "number" name="dataCPF" id = "dataCPF" placeholder="Digite o CPF, apenas numero">
-            </div>
-            <div class="quest">
-                <label for="dataCEP">CEP*</label>
-                <input type= "number" name="dataCEP" id = "dataCEP" placeholder="Digite o CEP">
-            </div>
-            <div class="quest">
-                <label for="dataSell">Endereço*</label>
-                <input type= "text" name="dataSell" id = "dataSell" placeholder="Digite seu endereço completo">
-            </div>
-            <div>
-                <input class="button" type="submit" value= "Cadastrar como cliente">
-            </div>
-        </div>
-    </form>
+    
     <footer>
         <p>Esse site é ficticio, feito apenas para fins de aprendizagem.</p>
     </footer>
+    <p class="error-validation template"></p>
+    <script src="../javascript/validation_client.js"></script>
 </body>
 </html>

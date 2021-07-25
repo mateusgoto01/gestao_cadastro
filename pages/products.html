@@ -5,48 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Produto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <main>
-        <div id="menu">
+        <div class="menu">
             <a href="../main.html">
-                <p>home</p>
+                <p class="pmenu">home</p>
             </a>
             <a href="registercl.html">
-                <p>clientes</p>
+                <p class="pmenu">clientes</p>
             </a>
             <a href="registerpr.html">
-                <p>Produtos</p>
+                <p class="pmenu">Produtos</p>
             </a>
         </div>
-        <div>
+        <div class="wrapper">
+            <form class="register" >
+                <div class = "sign">
+                    <h2>Cadastre seu produto:</h2>
+                    <div class="quest">
+                        <label for="dataName">Nome*</label>
+                        <input type= "text" name="dataName" id = "dataName" placeholder="Digite o nome do produto">
+                    </div>
+                    <div class="quest">
+                        <label for="dataQuant">Quantidade*</label>
+                        <input type= "number" name="dataQuant" id = "dataQuant" placeholder="Digite a quantidade">
+                    </div>
+                    <div class="quest">
+                        <label for="dataCat">Categoria*</label>
+                        <input type= "text" name="dataCat" id = "dataCat" placeholder="Qual a categoria do seu produto">
+                    </div>
+                    <div class="quest">
+                        <label for="dataSell">Valor de venda*</label>
+                        <input type= "number" name="dataSell" id = "dataSell" placeholder="Qual a categoria do seu produto">
+                    </div>
+                    <div>
+                        <input class="formbutton" type="submit" value= "Cadastrar Produto">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="wrapper">
             <a href="registerpr.html"><button>Visualizar cadastros de produtos</button></a>
         </div>
-        <form class="register" >
-            <div class = "sign">
-                <h2>Cadastre seu produto:</h2>
-                <div class="quest">
-                    <label for="dataName">Nome*</label>
-                    <input type= "text" name="dataName" id = "dataName" placeholder="Digite o nome do produto">
-                </div>
-                <div class="quest">
-                    <label for="dataQuant">Quantidade*</label>
-                    <input type= "number" name="dataQuant" id = "dataQuant" placeholder="Digite a quantidade">
-                </div>
-                <div class="quest">
-                    <label for="dataCat">Categoria*</label>
-                    <input type= "text" name="dataCat" id = "dataCat" placeholder="Qual a categoria do seu produto">
-                </div>
-                <div class="quest">
-                    <label for="dataSell">Valor de venda*</label>
-                    <input type= "number" name="dataSell" id = "dataSell" placeholder="Qual a categoria do seu produto">
-                </div>
-                <div>
-                    <input class="button" type="submit" value= "Cadastrar Produto">
-                </div>
-            </div>
-        </form>
     </main>
     <footer>
         <p>Esse site é ficticio, feito apenas para fins de aprendizagem.</p>
