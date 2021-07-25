@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Cliente</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
@@ -24,6 +25,34 @@
             <a href="registercl.html"><button>Visualizar cadastros de clientes</button></a>
         </div>
     </main>
+    <form class="register" >
+        <div class = "sign">
+            <h2>Cadastre seu produto:</h2>
+            <div class="quest">
+                <label for="dataClient">Nome*</label>
+                <input type= "text" name="dataClient" id = "dataClient" placeholder="Digite o seu nome aqui">
+            </div>
+            <div class="quest">
+                <label for="dataQuant">E-mail*</label>
+                <input type= "text" name="dataQuant" id = "dataQuant" placeholder="Digite seu e-mail aqui">
+            </div>
+            <div class="quest">
+                <label for="dataCPF">CPF*</label>
+                <input type= "number" name="dataCPF" id = "dataCPF" placeholder="Digite o CPF, apenas numero">
+            </div>
+            <div class="quest">
+                <label for="dataCEP">CEP*</label>
+                <input type= "number" name="dataCEP" id = "dataCEP" placeholder="Digite o CEP">
+            </div>
+            <div class="quest">
+                <label for="dataSell">Endereço*</label>
+                <input type= "text" name="dataSell" id = "dataSell" placeholder="Digite seu endereço completo">
+            </div>
+            <div>
+                <input class="button" type="submit" value= "Cadastrar como cliente">
+            </div>
+        </div>
+    </form>
     <footer>
         <p>Esse site é ficticio, feito apenas para fins de aprendizagem.</p>
     </footer>
