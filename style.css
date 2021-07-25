@@ -67,7 +67,7 @@ input{
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 18px;
-    padding: 12px 20px;
+    padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
     box-sizing: border-box;
@@ -127,8 +127,8 @@ button:active{
     margin: 0;
     padding: 0;
     color: rgb(253, 57, 57);
-    position: absolute;
-    top: 37px;
+    position: relative;
+    top: -3px;
     font-size: 0.8em;
 }
 

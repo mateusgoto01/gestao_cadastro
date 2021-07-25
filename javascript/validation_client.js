@@ -3,12 +3,12 @@ class validator{
     constructor(){
         this.validations = [
             'data-required',
+            'data-size',
             'data-emailcheck'
         ]
     }
     validate(form){
         //validações não desaparecem preciso limpa-las
-        var check = 0;
         let current_validations = document.querySelectorAll('form .error-validation');
 
         if(current_validations.length){
@@ -21,25 +21,17 @@ class validator{
       // fazer validação de acordo com o atributo do input
       for(let i = 0; this.validations.length > i; i++) {
         if(input.getAttribute(this.validations[i]) != null) {
-            console.log("tenho erros de validação");
             let method = this.validations[i].replace("data-", "").replace("-", "");
-            console.log(method);
             // valor do input
             let value = input.getAttribute(this.validations[i])
 
             // invoca o método
             this[method](input,value);
-            check = 1;
         }
         
       }
 
     }, this);
-    console.log(check);
-    if(check === 0){
-        storageData();
-    }
-    check = 0;
   }
 
     required(input){
@@ -48,6 +40,14 @@ class validator{
         if(value === ''){
             let message = "Este campo é obrigatório.";
 
+            this.print_message(input, message);
+        }
+    }
+
+    size(input, maxvalue){
+        let inputLength = input.value.length;
+        if(inputLength != maxvalue){
+            let message = `O campo precisa ter ${maxvalue} digitos`;
             this.print_message(input, message);
         }
     }
@@ -63,9 +63,7 @@ class validator{
 
         }
         else{
-            storageData();
-            document.getElementById('sign').style.display = "none";
-            document.getElementById('sucess').style.display = "block";
+            storage_client();
         }
     }
 
@@ -84,7 +82,6 @@ class validator{
             template.classList.remove('template');
 
             parent.appendChild(template);
-            console.log("mensagem enviada");
         }
 
         
@@ -95,6 +92,20 @@ class validator{
     }
 }
 
+function storage_client(){
+    let idSize = 0;
+
+    let client = document.getElementById('dataClient');
+    let quant = document.getElementsByID('dataQuant');
+    let cpf = document.getElementsByID('dataCPF');
+    let cep = document.getElementsByID('dataCEP');
+    let endereco = document.getElementsByID('dataEnd');
+
+    idSize++;
+
+    let json = {id = idSize, Name: client, Quant: quant, CPF: cpf, CEP: cep, Endereco: endereco};
+    localStorage.setItem('Cliente', JSON.stringify(json));
+}
 let form = document.getElementById('register');
 let submit = document.getElementById('formbutton');
 
