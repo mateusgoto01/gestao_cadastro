@@ -139,3 +139,9 @@ button:active{
 footer{
     text-align: center;
 }
+
+td{
+    color: black;
+    background-color: rgb(182, 179, 179);
+    padding: 0px 10px 0px 10px;
+}

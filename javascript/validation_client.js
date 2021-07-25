@@ -95,19 +95,16 @@ class validator{
 function storage_client(){
 
     var client = document.getElementById('dataClient').value;
-    console.log(client);
     var email = document.getElementById('dataEmail').value;
-    console.log(email);
     var cpf = document.getElementById('dataCPF').value;
     var cep = document.getElementById('dataCEP').value;
     var endereco = document.getElementById('dataEnd').value;
 
-    idSize++;
+
     var ClienteArray = JSON.parse(localStorage.getItem('Cliente') || '[]');
 
     var item = {Name: client, Email: email, CPF: cpf, CEP: cep, Endereco: endereco};
     ClienteArray.push(item);
-    console.log(ClienteArray);
     localStorage.setItem('Cliente', JSON.stringify(ClienteArray));
     alert("Cliente salvado.");
 }
